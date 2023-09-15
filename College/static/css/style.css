@@ -26,3 +26,19 @@ body{
     padding: 10px;
     background-color: #B4B4B3;
 }
+
+
+.column1 {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+.column2 {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+    padding: 10px;
+    margin-top: 0;
+}
