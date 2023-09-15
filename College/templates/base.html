@@ -1,0 +1,42 @@
+{% load bootstrap5 %}
+{% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    
+    {% if messages %}
+    <div class="toast  show" role="alert" aria-live="assertive" aria-atomic="true" style="z-index: 100; position: absolute;" data-bs-delay="100" data-bs-autohide="true">
+      <div class="toast-header">
+        <img src="{% static 'image/smile.jpg' %}" class="rounded me-2" height="10" width="40" alt="...">
+        <!-- <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small> -->
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" style="margin-left: 300px;"></button>
+      </div>
+      {% for message in messages %}
+      <div class="toast-body {% if message.tags %} {{ message.tags }} {% endif %}">
+        
+        {{ message }}
+       
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+
+</html>
