@@ -14,14 +14,17 @@ class User(models.Model):
 class Data(models.Model):
     first_name = models.CharField(max_length=20, blank=False, null=False)
     last_name = models.CharField(max_length=20, blank=False, null=False)
+    registration_date = models.DateField(default=timezone.now)
     gender = models.CharField(max_length=10, blank=False, null=False)
     occupation = models.CharField(max_length=20, blank=False, null=False)
-    phone_number = models.IntegerField(default=0)
+    phone_number = models.CharField(max_length=20, blank=False, null=False)
     nationality = models.CharField(max_length=20, blank=False, null=False)
     district = models.CharField(max_length=20, blank=False, null=False)
     tribe = models.CharField(max_length=20, blank=False, null=False)
     email = models.EmailField(max_length=255)
 
+    
+    
     def __str__(self):
-        self.first_name
+        return f"{self.first_name} {self.last_name}"
         

@@ -26,3 +26,8 @@ def data_form(request):
         form = RegistrationForm()
 
     return render(request, 'data_form.html', {'form': form})
+
+
+@login_required
+def lib(request):
+    return render(request,'lib.html')
