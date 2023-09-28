@@ -1,0 +1,39 @@
+.text-center{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #DDE6ED;
+    overflow-x: hidden;
+}
+
+.social-media-icons {
+    display: flex;
+    text-align: center;
+
+}
+
+.social-media-icons a {
+    margin-right: 30px; /* Adjust the spacing between icons */
+}
+
+.social-media-icons img {
+    width: 50px; /* Adjust the icon size */
+    height: 50px;
+}
+footer{
+    text-align: center;
+    background-color:#27374D ;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 67px;
+    width: 100%;
+    padding-top: 10px;
+    color:white;
+
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
